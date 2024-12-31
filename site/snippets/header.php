@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $site->title() ?></title>
 
-    <?= css('assets/scsss/index.scss') ?>
+    <?= css('public/css/index.css') ?>
 
 </head>
 <body>
@@ -14,7 +14,7 @@
         <!-- Dit zorgt ervoor dat het altijd naar de home pagina gaat en gaat nooit kapot gaan -->
         <a href="<?= $site->url() ?>" class="logo"><?= $site->title() ?></a>
     </header>
-
+dd
 
     <nav class="menu">
         <ul>
