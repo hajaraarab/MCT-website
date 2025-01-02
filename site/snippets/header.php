@@ -11,24 +11,33 @@
 <body>
 
     <header class="header">
-        <!-- Dit zorgt ervoor dat het altijd naar de home pagina gaat en gaat nooit kapot gaan -->
-        <a href="<?= $site->url() ?>" class="logo"><?= $site->title() ?></a>
+
+        <div class="logo">
+            <img src="/public/images/kdg-logo.png" class="logo-img">
+            <a href="<?= $site->url() ?>" class="logo-title"><?= $site->title() ?></a>
+        </div>
+
+
+        <div class="header-content">
+            <nav class="menu">
+                <ul>
+                    <?php foreach($site->children()->listed() as $item): ?>
+                        <li><a href="<?= $item->url() ?>" class="<?= r($item->isActive(), 'active') ?>"><?= $item->title() ?></a></li>
+                    <?php endforeach ?>
+                </ul>
+            </nav>  
+
+
+            <form action="" method="get" class="search">
+                <input type="text" name="search" placeholder="Search in site" value="">
+                
+                <button type="submit" class="search-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                    </svg>
+                </button>
+            </form>
+        </div>
+
+
     </header>
-dd
-
-    <nav class="menu">
-        <ul>
-            <!-- DIT ZORGT ERVOOR DAT ELKE LINK IN DE SITE BESTAND WORDT GEZET IN DE MENU -->
-                <!-- ENKEL DE HOOFDMAPPEN NIET DE SUBMAPPEN -->
-                <!-- EN DOET DE MAPPEN DIE GEEN NUMMER HEBBEN WEG -->
-            <?php foreach($site->children()->listed() as $item): ?>
-                <li><a href="<?= $item->url() ?>"><?= $item->title() ?></a></li>
-            <?php endforeach ?>
-        </ul>
-    </nav>  
-
-
-    <form action="<?= url('search') ?>" method="get">
-        <input type="text" name="q" placeholder="Search in site" value="">
-        <button type="submit">Zoek</button>
-    </form>

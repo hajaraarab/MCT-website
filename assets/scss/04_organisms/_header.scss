@@ -1,0 +1,53 @@
+@use '00_common/variables.scss'; 
+
+
+.header {
+    display: flex; 
+    // background-color: #cbcbcb; 
+    width: 100%; 
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 20px; 
+}
+.header-content {
+    display: flex; 
+    gap: 20px; 
+    align-items: center;
+}
+
+.search-btn {
+    width: 40px; 
+    height: auto; 
+    border: none; 
+    background: none;
+    padding: 5px; 
+
+    svg {
+        width: 20px; 
+    }
+}
+
+.search {
+    border: 1px solid variables.$light-grey; 
+    margin: 0; 
+    padding: 0; 
+    height: auto; 
+    display: flex; 
+    align-items: center;
+    border-radius: 5px;
+    box-sizing: border-box;
+    
+    input {
+        border: none; 
+        background: none;
+        height: 20px; 
+        box-sizing: border-box;
+        padding-left: 10px;
+    }
+    input:focus {
+        outline: none; 
+    }
+    ::placeholder {
+        // padding-left: 10px;
+    }
+}

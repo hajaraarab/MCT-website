@@ -1,0 +1,17 @@
+@use '00_common/variables.scss'; 
+
+.logo {
+    display: flex; 
+    align-items: center;
+    gap: 20px; 
+}
+.logo-img {
+    width: 5%; 
+    height: auto; 
+}
+.logo-title {
+    font-family: variables.$primary-font;
+    font-size: 28px; 
+    text-decoration: none;
+    color: inherit; 
+}

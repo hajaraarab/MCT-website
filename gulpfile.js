@@ -30,28 +30,26 @@ function styles() {
 }
 
 function images() {
-    return gulp.src('src/images/**/*')
+    return gulp.src('assets/images/**/*')
         .pipe(imagemin())
         .pipe(gulp.dest('public/images'));
 }
 
-// Deze functie zorgt ervoor dat de PHP-server wordt gestart met de juiste instellingen
 function watchAll() {
-    // Start de PHP-server
+
     phpServer();
 
-    // Start browserSync met de juiste instellingen
     browserSyncInstance.init({
-        proxy: 'localhost:8001', // Proxy naar de PHP-server op poort 8001
-        port: 8000,              // BrowserSync draait op poort 8000
-        open: true,              // Browser automatisch openen
-        injectChanges: true,     // Zorgt ervoor dat veranderingen automatisch worden geladen
-        reloadOnRestart: true,   // Herstart de pagina bij een herstart van de server
+        proxy: 'localhost:8001',
+        port: 8000,
+        open: true,
+        injectChanges: true,
+        reloadOnRestart: true,
     });
 
-    // Bekijk de SCSS-bestanden en compileer ze
     gulp.watch('assets/scss/**/*.scss', styles);
     gulp.watch('site/templates/**/*.php').on('change', browserSyncInstance.reload);
+    gulp.watch('site/snippets/**/*.php').on('change', browserSyncInstance.reload);
     gulp.watch('assets/images/**/*', images).on('change', browserSyncInstance.reload);
 }
 
