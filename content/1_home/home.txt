@@ -1,1 +1,10 @@
 Title: Home
+----
+about_title: About
+----
+about_text: The Multimedia and Creative Technology bachelor's program at Karel de Grote University College combines websites, apps, 3D, XR, and audio-video. You'll be using cutting-edge tools to create impressive media projects, from livestreams to metaverse experiences. Innovation and collaboration are key, with access to a FabLab full of professional equipment. 
+----
+last_post_title: Latest Posts
+----
+last_post_text: Engage with our community through shared experiences, carefully and 
+    creatively maintained by our social media manager Luna !

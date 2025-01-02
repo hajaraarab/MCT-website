@@ -28,7 +28,7 @@
 }
 
 .search {
-    border: 1px solid variables.$light-grey; 
+    border: 1px solid variables.$grey-light; 
     margin: 0; 
     padding: 0; 
     height: auto; 
@@ -43,11 +43,15 @@
         height: 20px; 
         box-sizing: border-box;
         padding-left: 10px;
+        font-family: variables.$secondary-font;
     }
     input:focus {
         outline: none; 
+        color: variables.$primary-color; 
+        font-weight: 500;
     }
     ::placeholder {
-        
+        font-family: variables.$secondary-font;
+        color: variables.$grey-dark; 
     }
 }

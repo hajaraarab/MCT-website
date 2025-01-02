@@ -1,0 +1,25 @@
+@use '00_common/variables.scss'; 
+
+body {
+    font-family: variables.$secondary-font;
+    background-color: none;
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0; 
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box; /* Zorg ervoor dat padding/border niet buiten de container valt */
+}
+
+.wrapper {
+    display: flex; 
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0; 
+    width: 100%; 
+    overflow-x: hidden;
+}

@@ -1,0 +1,25 @@
+@use '00_common/variables.scss'; 
+
+.about-latest-container {
+    display: flex; 
+    gap: 15px; 
+    width: 100%; 
+}
+.about {
+    background-color: variables.$grey-light;
+    padding: 10vh;
+    width: 50%; 
+
+    .paragraph-text {
+        font-size: 20px; 
+    }
+}
+.latest-posts {
+    padding: 20px; 
+    width: 50%; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

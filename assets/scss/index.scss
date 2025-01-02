@@ -4,32 +4,12 @@
 @use '01_fundaments/fonts'; 
 
 @use '02_atoms/logo'; 
-@use '02_atoms/hero-image'; 
+@use '02_atoms/body'; 
+@use '02_atoms/hero-image';
+@use '02_atoms/buttons';  
 
 @use '03_molecules/menu'; 
 
 @use '04_organisms/header'; 
 
-body {
-    font-family: variables.$secondary-font;
-    background-color: none;
-    box-sizing: border-box;
-    margin: 0; 
-    padding: 0; 
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box; /* Zorg ervoor dat padding/border niet buiten de container valt */
-}
-
-.wrapper {
-    display: flex; 
-    flex-direction: column;
-    box-sizing: border-box;
-    margin: 0; 
-    padding: 0; 
-    width: 100%; 
-    overflow-x: hidden;
-}
+@use '06_pages/home';
