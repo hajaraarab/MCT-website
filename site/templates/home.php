@@ -1,5 +1,7 @@
 <?php snippet('header') ?>
 
-<h1><?= $page->title() ?></h1>
+<div class="hero-image">
+    <img src="/public/images/kdg-school.png" class="school-image">
+</div>
 
 <?php snippet('footer') ?>
