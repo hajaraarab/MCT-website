@@ -1,0 +1,33 @@
+title: Home Page
+
+fields:
+  about_title:
+    label: About Title
+    type: text
+
+  about_text:
+    label: About Text
+    type: textarea
+
+  last_post_title:
+    label: Latest Post Title
+    type: text
+
+  last_post_text:
+    label: Latest Post Text
+    type: textarea
+
+  profiles:
+    label: Profiles
+    type: structure
+    fields:
+      title:
+        label: Title
+        type: text
+      url:
+        label: URL
+        type: url
+      icon:
+        label: Icon
+        type: text
+        
