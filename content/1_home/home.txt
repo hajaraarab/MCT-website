@@ -13,3 +13,5 @@ profiles_title: Profiles
 profiles_text: You'll graduate amongst one of these four profiles, depending on what interests you the most! Want to find out more? Click the icons for some more info!
 ----
 portfolio_title: Portfolio
+----
+portfolio_text: Check out our student's content!

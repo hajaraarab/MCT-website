@@ -1,0 +1,27 @@
+@use '00_common/variables'; 
+
+
+.discover-your-passion {
+    background-color: variables.$black-light;
+    color: variables.$white; 
+    display: flex; 
+    flex-direction: column;
+    padding: 100px; 
+    align-items: center;
+    justify-content: center;
+    gap: 25px; 
+    text-align: center;
+
+    img {
+        width: 80px; 
+    }
+
+    .title {
+        font-size: 24px; 
+        font-weight: 600;
+        margin: 0; 
+    }
+    .description {
+        font-size: 16px;
+    }
+}

@@ -118,8 +118,11 @@
 </div>
 
 <div class="portfolio">
-    <p class="primary-heading"><?= $page->portfolio_title()->html() ?></p>
-    <p>Check out our student's content!</p>
+    
+    <div class="portfolio-heading">
+        <p class="primary-heading"><?= $page->portfolio_title()->html() ?></p>
+        <p> <?= $page->portfolio_text()->html() ?></p>
+    </div>
 
     <div class="subject-cards-container">
         <?php

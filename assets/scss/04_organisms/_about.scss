@@ -1,0 +1,20 @@
+@use '00_common/variables.scss'; 
+
+.about-latest-container, .profiles {
+    display: flex; 
+    flex-direction: column;
+}
+
+.about, .profiles {
+    background-color: variables.$grey-light;
+}
+
+.about, .latest-posts {
+    padding: 10vh;
+}
+
+.about, .profiles-info {
+    .paragraph-text {
+        font-size: min(4vw, 20px);
+    }
+}

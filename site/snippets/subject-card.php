@@ -1,5 +1,7 @@
 <div class="subject-card">
+    <div>
     <img src="<?= $image ?>" alt="<?= $title ?>" class="main-img">
+    </div>
 
     <div class="subject-card-info">
         <p class="subject-card-title"><?= $title ?></p>
