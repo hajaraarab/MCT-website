@@ -8,7 +8,8 @@ last_post_title: Latest Posts
 ----
 last_post_text: Engage with our community through shared experiences, carefully and creatively maintained by our social media manager Luna!
 ----
-profiles_heading: Profiles
+profiles_title: Profiles
 ----
 profiles_text: You'll graduate amongst one of these four profiles, depending on what interests you the most! Want to find out more? Click the icons for some more info!
-
+----
+portfolio_title: Portfolio

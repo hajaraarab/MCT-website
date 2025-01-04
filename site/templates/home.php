@@ -63,8 +63,8 @@
     </div>
     
     <div class="profiles-info">
-        <p class="primary-heading"><?= $page->profiles_heading()->html() ?></p>
-        <p class="paragraph-text"><?= $page->profiles_text()->kirbytext() ?></p>
+        <p class="primary-heading"><?= $page->profiles_title()->html() ?></p>
+        <p class="paragraph-text"><?= $page->profiles_text() ?></p>
     </div>
 </div>
 
@@ -105,5 +105,59 @@
 </div>
 
 <div class="discover-your-passion">
-    
+    <img src="/public/images/kdg-logo-zwart.png">
+
+    <div class="info">
+        <p class="title">Discover Your Passion!</p>
+        <p class="description">Join us and explore the exciting world of multimedia & creative technologies.</p>
+    </div>
+
+    <a href="https://www.kdg.be/inschrijven">
+        <button class="secondary-btn">Enroll</button>
+    </a>
+</div>
+
+<div class="portfolio">
+    <p class="primary-heading"><?= $page->portfolio_title()->html() ?></p>
+    <p>Check out our student's content!</p>
+
+    <div class="subject-cards-container">
+        <?php
+        $portfolios = [
+            [
+                'image' => '/public/images/portfolio-picture-one.png', 
+                'title' => 'The Art Of UX Design', 
+                'description' => '3rd Year UX/UI',
+                'name' => 'Kyrenia De Loenen',
+            ],
+            [
+                'image' => '/public/images/portfolio-picture-one.png', 
+                'title' => 'The Art Of UX Design', 
+                'description' => '3rd Year UX/UI',
+                'name' => 'Kyrenia De Loenen',
+            ],
+            [
+                'image' => '/public/images/portfolio-picture-one.png', 
+                'title' => 'The Art Of UX Design', 
+                'description' => '3rd Year UX/UI',
+                'name' => 'Kyrenia De Loenen',
+            ],
+            [
+                'image' => '/public/images/portfolio-picture-one.png', 
+                'title' => 'The Art Of UX Design', 
+                'description' => '3rd Year UX/UI',
+                'name' => 'Kyrenia De Loenen',
+            ],
+        ]; 
+        foreach ($portfolios as $portfolio) {
+            snippet('portfolio-card', [
+                'image' => $portfolio['image'],
+                'title' => $portfolio['title'],
+                'description' => $portfolio['description'],
+                'name' => $portfolio['name'], 
+            ]);
+        }
+        ?>
+    </div>
+   
 </div>

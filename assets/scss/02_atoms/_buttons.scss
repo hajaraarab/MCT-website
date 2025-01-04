@@ -1,15 +1,30 @@
 @use '00_common/variables.scss'; 
 
-.primary-btn {
+.primary-btn, .secondary-btn {
     border: none; 
-    background-color: variables.$primary-color;
-    color: variables.$white; 
     font-family: variables.$secondary-font;
-    font-size: 16px; 
-    width: 240px;    
+    font-size: 16px;   
     height: 6vh; 
     border-radius: 8px; 
 }
+
+.primary-btn {
+    background-color: variables.$primary-color;
+    color: variables.$white;
+    width: 240px;   
+    font-weight: 500; 
+}
 .primary-btn:hover {
     background-color: variables.$primary-color-darker;
+}
+
+.secondary-btn {
+    background-color: variables.$white;
+    color: variables.$primary-color;
+    width: 160px; 
+    font-weight: 600; 
+}
+.secondary-btn:hover {
+    background-color: variables.$grey-dark; 
+    color: variables.$white; 
 }

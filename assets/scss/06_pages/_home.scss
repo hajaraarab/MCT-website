@@ -15,7 +15,7 @@
 
 .about, .profiles-info {
     .paragraph-text {
-        font-size: min(2.8vw, 20px);
+        font-size: min(4vw, 20px);
     }
 }
 
@@ -59,6 +59,9 @@
             object-fit: cover;
         }
     }
+    .profile-icon-wrapper:hover {
+        background-color: #d6d8e3;
+    }
 
     a {
         color: variables.$primary-color; 
@@ -76,11 +79,31 @@
     padding: 10vh;
 }
 
-.subject-cards-container {
+.discover-your-passion {
+    background-color: variables.$black-light;
+    color: variables.$white; 
     display: flex; 
-    gap: 20px; 
     flex-direction: column;
+    padding: 100px; 
+    align-items: center;
+    justify-content: center;
+    gap: 25px; 
+    text-align: center;
+
+    img {
+        width: 80px; 
+    }
+
+    .title {
+        font-size: 24px; 
+        font-weight: 600;
+        margin: 0; 
+    }
+    .description {
+        font-size: 16px;
+    }
 }
+
 
 .subject {
     padding: 50px;
@@ -91,38 +114,74 @@
     .primary-heading {
         margin-bottom: 40px;
     }
+}
 
-    &-cards-container {
-        display: flex;
-        gap: 20px;
+.subject-cards-container {
+    display: flex; 
+    gap: 20px; 
+    flex-direction: column;
+    width: 80%; 
+}
+
+.subject-card {
+    display: flex; 
+    border: 2px solid variables.$grey-light; 
+    border-radius: 6px; 
+    padding: 15px; 
+
+    .main-img {
+        width: 100px; 
+        height: 100px; 
+    }
+    &-info {
+        margin-left: 15px; 
+    }
+    &-title {
+        font-size: 20px; 
+        color: variables.$primary-color;
+        font-weight: 600;  
+        margin: 0; 
+    }
+}
+.subject-card:hover {
+    background-color: variables.$grey-light;
+}
+
+.portfolio {
+    padding: 50px; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .subject-cards-container {
+        display: flex; 
+        flex-wrap: wrap;
     }
 
-    &-card {
-        display: flex;
-        border: 2px solid variables.$grey-light;
-        border-radius: 6px;
-        padding: 15px;
-
-        img {
-            width: 100px;
-            height: 100px;
-        }
-
-        &-info {
-            margin-left: 15px;
-        }
-
-        &-title {
-            font-size: 20px;
-            color: variables.$primary-color;
-            font-weight: 600;
-            margin: 0;
-        }
-
-        &-description {
-            font-size: 16px;
-        }
+    .subject-card {
+        flex: 1 1 45%; 
     }
+}
+
+.project-creator {
+    display: flex; 
+    justify-content: space-between;
+    width: 180%; 
+    // background-color: red;
+    
+    p, img {
+        margin: 0; 
+    }
+}
+.creator-details {
+    display: flex; 
+    align-items: center;
+    gap: 10px;
+}
+
+.project-creator-icon {
+    width: 20px; 
 }
 
 @media screen and (min-width: 768px) {
@@ -137,5 +196,12 @@
     .subject-cards-container {
         flex-direction: row;
         box-sizing: border-box;
+    }
+    .discover-your-passion {
+        flex-direction: row;
+        text-align: left;
+    }
+    .project-creator {
+        width: 200%; 
     }
 }

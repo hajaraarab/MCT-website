@@ -1,5 +1,5 @@
 <div class="subject-card">
-    <img src="<?= $image ?>" alt="<?= $title ?>">
+    <img src="<?= $image ?>" alt="<?= $title ?>" class="main-img">
 
     <div class="subject-card-info">
         <p class="subject-card-title"><?= $title ?></p>
