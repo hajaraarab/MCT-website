@@ -1,14 +1,63 @@
-@use '00_common/variables'; 
+@use '00_common/variables';
 
-.faq-container{
-    padding: 50px; 
-    background-color: variables.$grey-light; 
+.faq-container {
+    padding: 50px;
+    background-color: variables.$grey-light;
+    width: 100%; 
     display: flex; 
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     text-align: center;
+    box-sizing: border-box;
 
     .primary-heading {
-        padding: 30px; 
+        padding: 40px;
     }
+}
+
+.faq {
+    width: 100%; 
+    box-sizing: border-box;
+
+    button {
+        display: flex; 
+        justify-content: space-between;
+        align-items: center; 
+        width: 100%; 
+    }
+}
+
+.faq-question {
+    // width: 100%; 
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px; 
+    background-color: variables.$white;
+    box-sizing: border-box;
+
+    p {
+        margin: 0; 
+        padding: 0; 
+        margin-right: 15px; 
+    }
+}
+.faq-question, .faq-answer {
+    font-size: min(4vw, 20px);
+    font-family: variables.$secondary-font;
+    font-weight: 550; 
+}
+
+.faq-question svg {
+    width: 20px; 
+    height: auto; 
+    flex-shrink: 0;
+    color: variables.$primary-color;
+}
+
+.faq-question svg {
+    transition: transform 0.3s ease; /* Zorgt voor een soepele animatie */
+}
+
+.faq-question.active svg {
+    transform: rotate(-180deg); /* Draai 90 graden */
 }

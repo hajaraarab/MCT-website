@@ -48,7 +48,7 @@
     }
     .creator-name {
         font-size: min(3vw, 16px);;
-        font-weight: 600;
+        font-weight: 550;
         width: 100%;
     }
 }
@@ -134,4 +134,13 @@
     .subject, .portfolio {
         padding: 50px; 
     }
+    .faq {
+        width: 70%; 
+    }
+    .faq-question svg {
+        width: 20px;
+        height: auto; 
+        color: variables.$primary-color;
+    }
+    
 }
