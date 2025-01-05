@@ -164,3 +164,7 @@
     </div>
    
 </div>
+
+<div class="faq-container">
+    <?php snippet('faq') ?>
+</div>

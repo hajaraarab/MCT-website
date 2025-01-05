@@ -1,0 +1,14 @@
+@use '00_common/variables'; 
+
+.faq-container{
+    padding: 50px; 
+    background-color: variables.$grey-light; 
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+
+    .primary-heading {
+        padding: 30px; 
+    }
+}

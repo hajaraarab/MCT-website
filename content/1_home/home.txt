@@ -15,3 +15,19 @@ profiles_text: You'll graduate amongst one of these four profiles, depending on 
 portfolio_title: Portfolio
 ----
 portfolio_text: Check out our student's content!
+----
+faq_title: FAQ
+----
+questions:
+  - question: "Is this course available for international students?"
+    answer: "Yes! Currently, this course is split between the Dutch version and an exchange-friendly English version."
+  - question: "What computer do I need?"
+    answer: "You will need a computer that meets the following requirements..."
+  - question: "What are my internship possibilities?"
+    answer: "Yes, there are various internship opportunities available throughout the course."
+  - question: "What if I have special needs?"
+    answer: "We offer support services for students with special needs..."
+  - question: "How can we get to campus (and are there any housing possibilities/dormitories)?"
+    answer: "The campus is well-connected by public transport, and we also offer housing options for students."
+  - question: "Can we go on exchange programs through this course?"
+    answer: "Yes, students are eligible for exchange programs with partner universities."

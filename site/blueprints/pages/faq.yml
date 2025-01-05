@@ -1,0 +1,14 @@
+title: FAQ
+
+fields:
+  questions:
+    label: questions
+    type: repeater
+    fields:
+      question:
+        label: question
+        type: text
+      answer:
+        label: answer
+        type: textarea
+

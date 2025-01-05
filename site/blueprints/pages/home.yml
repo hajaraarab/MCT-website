@@ -1,22 +1,17 @@
-title: Home Page
-
+title: Home
 fields:
   about_title:
     label: About Title
     type: text
-
   about_text:
     label: About Text
     type: textarea
-
   last_post_title:
     label: Latest Post Title
     type: text
-
   last_post_text:
     label: Latest Post Text
     type: textarea
-
   profiles:
     label: Profiles
     type: structure
@@ -30,4 +25,14 @@ fields:
       icon:
         label: Icon
         type: text
-        
+  questions:
+    label: questions
+    type: repeater
+    fields:
+      question:
+        label: question
+        type: text
+      answer:
+        label: answer
+        type: textarea
+
