@@ -1,0 +1,177 @@
+// @keyframes openMenu 
+// {
+//     0% { transform: translateX(-300px); }
+//     100% { transform: translateX(0); }
+// }
+// @keyframes closeMenu 
+// {
+//     100% { transform: translateX(-300px); }
+//     0% { transform: translateX(0px); }
+// }
+
+
+// .menu-btn {
+//     .hamburger-icon,
+//     .close-icon {
+//         display: none; // Verberg standaard beide iconen
+//     }
+
+//     .hamburger-icon.active,
+//     .close-icon.active {
+//         display: block; // Toon alleen de actieve icoon
+//     }
+
+//     svg {
+//         width: 20px; // Pas de breedte van de iconen aan
+//     }
+// }
+
+
+// .menu-phone {
+//     background-color: $bg-color-grey;
+//     padding: 10px; 
+//     max-width: 160px;
+//     height: 100vh; 
+
+//     &.open
+//     {
+//         display: block;
+//         animation: openMenu .5s forwards;
+//     }
+//     &.close 
+//     {
+//         display: block; 
+//         animation: closeMenu .25s forwards; 
+//     }
+// }
+/* Algemene header styling */
+// .header {
+//     display: flex;
+//     width: 100%;
+//     justify-content: space-between;
+//     box-sizing: border-box;
+//     padding: 20px;
+//     background-color: grey;
+// }
+
+// .header-content {
+//     display: flex;
+//     gap: 20px;
+//     align-items: center;
+// }
+
+// .search-btn {
+//     width: 40px;
+//     height: auto;
+//     border: none;
+//     background: none;
+//     padding: 5px;
+
+//     svg {
+//         width: 20px;
+//     }
+// }
+
+// /* Zoekveld styling */
+// .search {
+//     display: none;
+//     border: 1px solid variables.$grey-light;
+//     margin: 0;
+//     padding: 0;
+//     height: auto;
+//     align-items: center;
+//     border-radius: 5px;
+//     box-sizing: border-box;
+
+//     input {
+//         border: none;
+//         background: none;
+//         height: 20px;
+//         box-sizing: border-box;
+//         padding-left: 10px;
+//         font-family: variables.$secondary-font;
+//     }
+
+//     input:focus {
+//         outline: none;
+//         color: variables.$primary-color;
+//         font-weight: 500;
+//     }
+
+//     ::placeholder {
+//         font-family: variables.$secondary-font;
+//         color: variables.$grey-dark;
+//     }
+// }
+
+/* Menu voor mobiel */
+// .menu-items {
+//     background-color: variables.$grey-dark;
+//     height: 100vh;
+//     max-width: 250px;
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     transform: translateX(100%); /* Begin met het menu buiten het scherm */
+//     opacity: 0;
+//     transition: transform 0.3s ease, opacity 0.3s ease; /* Voeg overgang toe */
+
+//     &.open {
+//         transform: translateX(0); /* Breng het menu in zicht */
+//         opacity: 1;
+//     }
+
+//     &.close {
+//         transform: translateX(100%); /* Verberg het menu weer buiten beeld */
+//         opacity: 0;
+//     }
+// }
+
+// /* Mobile menu toggle button */
+// .menu-phone {
+//     display: block; /* Toont de hamburger knop op mobiel */
+// }
+
+// .menu-toggle {
+//     background: none;
+//     border: none;
+//     padding: 10px;
+//     cursor: pointer;
+// }
+
+// .menu-toggle svg {
+//     width: 24px;
+//     height: 24px;
+//     stroke: currentColor;
+// }
+
+// .close-btn {
+//     display: none;
+//     background: none;
+//     border: none;
+//     padding: 10px;
+//     cursor: pointer;
+// }
+
+// .close-btn svg {
+//     width: 24px;
+//     height: 24px;
+//     stroke: currentColor;
+// }
+
+/* Desktop menu styling */
+// .menu-desktop {
+//     display: none;
+// }
+
+// @media screen and (min-width: 768px) {
+//     .menu-desktop {
+//         display: flex; /* Toon menu op desktop */
+//     }
+//     .menu-phone {
+//         display: none; /* Verberg mobiele menu-toggle op desktop */
+//     }
+//     .search {
+//         display: flex; /* Toon zoekveld op desktop */
+//     }
+// }
