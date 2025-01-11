@@ -1,0 +1,39 @@
+@use '00_common/variables'; 
+
+
+.footer {
+    background-color: variables.$black-light; 
+    color: variables.$white; 
+    padding: 100px; 
+    display: flex; 
+    justify-content: space-between;
+}
+
+.footer-branding {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-links {
+    display: flex; 
+    width: 50%; 
+    gap: 20px; 
+
+    a {
+        display: flex; 
+        text-decoration: none;
+        color: inherit; 
+    }
+    a:hover {
+        background-color: variables.$grey-dark;
+        padding: 5px; 
+        width: auto; 
+        border-radius: 5px;
+    }
+
+    .footer-column {
+        flex: 1; 
+        word-wrap: break-word;
+    }
+}

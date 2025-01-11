@@ -180,13 +180,13 @@
     </div>
     <div class="contact-form">
         <form class="contact-us-form">
-            <label for="name">Name</label>
+            <label for="name" class="sub-heading">Name</label>
             <input type="text" placeholder="Your Name">
 
-            <label for="email">Email</label>
+            <label for="email" class="sub-heading">Email</label>
             <input type="email" placeholder="Your Email">
 
-            <label for="message">Message</label>
+            <label for="message" class="sub-heading">Message</label>
             <textarea name="message" id="message" placeholder="Your message"></textarea>
 
             <div class="buttons">
