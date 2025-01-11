@@ -191,10 +191,10 @@
 
             <div class="buttons">
                 <a href="https://www.kdg.be/inschrijven">
-                    <button class="secondary-btn">Enroll</button>
+                    <button class="secondary-btn">Undo</button>
                 </a>
                 <a href="https://www.instagram.com/mct.kdg/">
-                    <button class="primary-btn">See More</button>
+                    <button class="primary-btn">Send</button>
                 </a>
             </div>
         </form>
