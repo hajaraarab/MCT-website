@@ -200,3 +200,9 @@
         </form>
     </div>
 </div>
+
+<div class="map">
+    <img src="/public/images/temporary-pic.png" alt="Temporary picture">
+</div>
+
+<?php snippet('footer') ?>

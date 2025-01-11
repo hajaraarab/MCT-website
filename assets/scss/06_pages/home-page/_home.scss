@@ -1,0 +1,73 @@
+@use '00_common/variables'; 
+
+@use 'about'; 
+@use 'latest_posts'; 
+@use 'profiles'; 
+@use 'courses'; 
+@use 'discover'; 
+@use 'portfolios'; 
+@use 'faq'; 
+@use 'contact-us'; 
+
+.map {
+    padding: 50px; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 100%; 
+        height: 300px; 
+        border-radius: 16px; 
+    }
+}
+@media screen and (min-width: 768px) {
+    .about-latest-container, .profiles {
+        flex-direction: row;
+        gap: 15px; 
+        width: 100%; 
+    }
+    .about, .latest-posts, .profiles-links, .profiles-info {
+        width: 50%; 
+    }
+    .subject-cards-container {
+        flex-direction: row;
+        box-sizing: border-box;
+    }
+    .discover-your-passion {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .portfolio {
+        .subject-cards-container {
+            flex-wrap: wrap;
+            width: 70%; 
+        }
+
+        .subject-card {
+            flex: 1 1 calc(50% - 20px);
+            box-sizing: border-box;
+        }
+    }
+
+    .subject, .portfolio {
+        padding: 50px; 
+    }
+    .faq {
+        width: 70%; 
+    }
+    .faq-question svg {
+        width: 20px;
+        height: auto; 
+        color: variables.$primary-color;
+    }
+    .contact-us {
+        display: flex; 
+        flex-direction: row;
+    }
+    .contact-info, .contact-form {
+        width: 50%; 
+    }
+    
+}
