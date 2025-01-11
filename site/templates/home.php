@@ -7,7 +7,7 @@
 <div class="about-latest-container">
     <div class="about">
 
-        <!-- ->html vermeid XXS aanvallen, en zorgt ervoor dat de tekst correct wordt weergegeven in html -->
+        <!-- html vermeid XXS aanvallen, en zorgt ervoor dat de tekst correct wordt weergegeven in html -->
         <p class="primary-heading"><?= $page->about_title()->html() ?></p>
 
         <p class="paragraph-text"><?= nl2br($page->about_text()->html()) ?></p>
@@ -134,10 +134,10 @@
                 'name' => 'Kyrenia De Loenen',
             ],
             [
-                'image' => '/public/images/portfolio-picture-one.png', 
-                'title' => 'The Art Of UX Design', 
-                'description' => '3rd Year UX/UI',
-                'name' => 'Kyrenia De Loenen',
+                'image' => '/public/images/portfolio-picture-two.jpg', 
+                'title' => 'Video Edititing Trends', 
+                'description' => '3rd Year AV',
+                'name' => 'Amir Akodad',
             ],
             [
                 'image' => '/public/images/portfolio-picture-one.png', 
@@ -146,10 +146,10 @@
                 'name' => 'Kyrenia De Loenen',
             ],
             [
-                'image' => '/public/images/portfolio-picture-one.png', 
-                'title' => 'The Art Of UX Design', 
-                'description' => '3rd Year UX/UI',
-                'name' => 'Kyrenia De Loenen',
+                'image' => '/public/images/portfolio-picture-two.jpg', 
+                'title' => 'Video Edititing Trends', 
+                'description' => '3rd Year AV',
+                'name' => 'Amir Akodad',
             ],
         ]; 
         foreach ($portfolios as $portfolio) {
@@ -162,9 +162,41 @@
         }
         ?>
     </div>
+
+    <a href="https://www.instagram.com/mct.kdg/">
+        <button class="primary-btn">See More</button>
+    </a>
    
 </div>
 
 <div class="faq-container">
     <?php snippet('faq') ?>
+</div>
+
+<div class="contact-us">
+    <div class="contact-info">
+        <p class="primary-heading">Contact us</p>
+        <p class="paragraph-text">More questions, or couldn't find the anwser you were looking for in the FAQ? Contact us here!</p>
+    </div>
+    <div class="contact-form">
+        <form class="contact-us-form">
+            <label for="name">Name</label>
+            <input type="text" placeholder="Your Name">
+
+            <label for="email">Email</label>
+            <input type="email" placeholder="Your Email">
+
+            <label for="message">Message</label>
+            <textarea name="message" id="message" placeholder="Your message"></textarea>
+
+            <div class="buttons">
+                <a href="https://www.kdg.be/inschrijven">
+                    <button class="secondary-btn">Enroll</button>
+                </a>
+                <a href="https://www.instagram.com/mct.kdg/">
+                    <button class="primary-btn">See More</button>
+                </a>
+            </div>
+        </form>
+    </div>
 </div>

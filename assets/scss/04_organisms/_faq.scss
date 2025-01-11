@@ -25,6 +25,7 @@
         align-items: center; 
         width: 100%; 
         border: 1px solid black; 
+        border-radius: 2px;
     }
 }
 
@@ -35,6 +36,7 @@
     margin-bottom: 15px; 
     background-color: variables.$white;
     box-sizing: border-box;
+    padding: 8px; 
 
     p {
         margin: 0; 
@@ -59,6 +61,12 @@
     transition: transform 0.3s ease; /* Zorgt voor een soepele animatie */
 }
 
-.faq-question.active svg {
-    transform: rotate(-180deg); /* Draai 90 graden */
+.faq-question.active {
+
+    color: variables.$primary-color; 
+    border: 2px solid variables.$primary-color; 
+
+    svg {
+        transform: rotate(-180deg); /* Draai 90 graden */
+    }
 }

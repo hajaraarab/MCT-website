@@ -3,103 +3,67 @@
 @use '04_organisms/about'; 
 @use '04_organisms/latest_posts'; 
 @use '04_organisms/profiles'; 
+@use '04_organisms/courses'; 
 @use '04_organisms/discover'; 
+@use '04_organisms/portfolios'; 
 @use '04_organisms/faq'; 
 
-
-
-.subject-cards-container {
-    display: flex; 
-    gap: 20px; 
-    flex-direction: column;
+.contact-us {
+    padding: 100px; 
+    gap: 70px; 
 }
-.subject {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .primary-heading {
-        margin-bottom: 40px;
-    }
-}
-
-.subject-card {
-    border: 2px solid variables.$grey-light;
-    border-radius: 6px;
-    padding: 15px; 
-    gap: 15px; 
-    width: 100%; 
-    display: flex; 
-
-    .main-img {
-        width: 100px; 
-        height: 100px; 
-        object-fit: cover; 
-    }
-    &-title {
-        font-size: min(4vw, 20px);
-        color: variables.$primary-color;
-        font-weight: 600;
-        margin: 0;
-    }
-    &-description {
-        font-size: min(3.5vw, 16px); //16px
-    }
-    .creator-name {
-        font-size: min(3vw, 16px);;
-        font-weight: 550;
-        width: 100%;
-    }
-}
-.subject-card-info {
+.contact-info {
     display: flex; 
     flex-direction: column;
-    flex-grow: 1;
-}
-.subject-card:hover {
-    background-color: variables.$grey-light;
-}
-
-.portfolio {
-    padding: 20px;
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    padding-bottom: 70px; 
-
-    .subject-card .main-img{
-        width: 25%; 
-        height: 100%; 
-    }
-    &-heading {
-        padding: 40px; 
-        text-align: center;
-    }
 }
-.project-creator {
-    display: flex;  
-    flex-grow: 1;
-    width: 100%; 
-    align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box;
-    
-    p, img {
-        margin: 0; 
-    }
-    &-icon {
-        width: 20px; 
-    }
-}
-
-.creator-details {
+.contact-us-form {
     display: flex; 
-    width: auto; 
-    gap: 1vw; 
-}
+    flex-direction: column;
 
+    label, input, textarea, ::placeholder {
+        font-family: variables.$secondary-font;
+        font-size: 14px; 
+    }
+    label {
+        font-weight: 600; 
+        margin-bottom: 5px;  
+    }
+    input, textarea {
+        border-radius: 6px; 
+        border: 2px solid rgba(0, 0, 0, 0.1);
+        padding: 10px; 
+    }
+    input {
+        margin-bottom: 15px;
+        box-sizing: border-box; 
+    }
+    textarea {
+        height: 120px; 
+        resize: none; 
+    }
+    :focus {
+        border: 3px solid variables.$primary-color; 
+        outline: none; 
+    }
+
+    .buttons {
+        display: flex; 
+        gap: 12px; 
+        margin-top: 20px;
+        width: 100%; 
+
+        .secondary-btn {
+            border: 2px solid black; 
+        }
+        .primary-btn, .secondary-btn {
+            width: 100%; 
+        }
+    }
+    .buttons a {
+        width: 50%; 
+    }
+}
 
 @media screen and (min-width: 768px) {
     .about-latest-container, .profiles {
@@ -141,6 +105,12 @@
         width: 20px;
         height: auto; 
         color: variables.$primary-color;
+    }
+    .contact-us {
+        display: flex; 
+    }
+    .contact-info, .contact-form {
+        width: 50%; 
     }
     
 }

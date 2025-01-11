@@ -13,6 +13,7 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
+    align-items: center;
     box-sizing: border-box;
     padding: 20px;
     background-color: variables.$white;
@@ -21,14 +22,23 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     z-index: 1000;  
 }
+.logo {
+    img {
+        width: 30px; 
+    }
+
+    a {
+        font-size: min(5vw, 20px);
+    }
+}
 
 .menu-btn {
     background: none;
     border: none; 
-    width: 8%; 
+    padding: 5px; 
 
     svg {
-        width: 30px; 
+        width: 20px; 
         transform: scaleX(-1);
     }
     .close-icon svg {
@@ -101,17 +111,22 @@
     a {
         text-decoration: none;
         color: variables.$black; 
+
+        &.active {
+            color: variables.$primary-color; 
+        }
     }
     a:hover {
         color: variables.$primary-color; 
         text-decoration: underline;
     }
+
 }
 
 .header-content {
     display: flex; 
     align-items: center;
-    gap: 15px; 
+    gap: 30px; 
 }
 
 .search-desktop {

@@ -1,0 +1,55 @@
+@use '00_common/variables.scss'; 
+
+.subject-cards-container {
+    display: flex; 
+    gap: 20px; 
+    flex-direction: column;
+}
+.subject {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px; 
+
+    .primary-heading {
+        margin-bottom: 40px;
+    }
+}
+
+.subject-card {
+    border: 2px solid variables.$grey-light;
+    border-radius: 6px;
+    padding: 15px; 
+    gap: 15px; 
+    width: 100%; 
+    display: flex; 
+
+    .main-img {
+        width: 100px; 
+        height: 100px; 
+        object-fit: cover; 
+    }
+    &-title {
+        font-size: min(4vw, 20px);
+        color: variables.$primary-color;
+        font-weight: 600;
+        margin: 0;
+    }
+    &-description {
+        font-size: min(3.5vw, 16px); //16px
+    }
+    .creator-name {
+        font-size: min(3vw, 16px);;
+        font-weight: 550;
+        width: 100%;
+    }
+}
+.subject-card-info {
+    display: flex; 
+    flex-direction: column;
+    flex-grow: 1;
+}
+.subject-card:hover {
+    background-color: variables.$grey-light;
+}
