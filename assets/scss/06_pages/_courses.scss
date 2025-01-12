@@ -1,0 +1,46 @@
+@use '00_common/variables'; 
+
+.courses-heading {
+    margin-top: 75px; 
+    background-color: variables.$black-light;
+    color: variables.$white; 
+    padding: 50px; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.subheading {
+    font-size: 20px; 
+}
+
+.profile-filter {
+    padding: 50px; 
+    display: flex; 
+    justify-content: center;
+    gap: 10px; 
+}
+
+.header-btns {
+    display: flex; 
+    white-space: nowrap;
+    gap: 10px; 
+}
+
+.courses-btn {
+    text-decoration: none;
+    color: inherit; 
+    border: 3px solid rgba(55, 127, 158, 0.712);
+    padding: 7px; 
+    flex: 1; 
+    background: none;
+    border-radius: 6px;
+
+    &.active {
+        background-color: rgba(55, 127, 158, 0.712);
+    }
+}
+
+table, th, td {
+    border: 1px solid black; 
+}

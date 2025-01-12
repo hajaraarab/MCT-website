@@ -5,7 +5,6 @@ use Kirby\Database\Db;
 
 getDatabaseConnection();
 
-// Haal gegevens uit de database
 $data = Db::select('classes', '*');
 
 ?>
