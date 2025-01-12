@@ -1,4 +1,5 @@
 <?php
+
    $about = $page->find('about');
    $latestPosts = $page->find('latest-posts');
    $profileInfo = $page->find('profiles');
@@ -10,11 +11,11 @@
 
 <?php snippet('header') ?>
 
+
 <!-- SECTIE -->
 <div class="hero-image">
     <img src="/public/images/kdg-school.png" class="school-image">
 </div>
-
 
 <!-- SECTIE -->
 <div class="about-latest-container">
