@@ -1,22 +1,34 @@
+<?php
+   $about = $page->find('about');
+   $latestPosts = $page->find('latest-posts');
+   $profileInfo = $page->find('profiles');
+   $subjectInfo = $page->find('subjects');
+   $discover = $page->find('discover');
+   $portfolioInfo = $page->find('portfolio');
+   $contact = $page->find('contact');
+?>
+
 <?php snippet('header') ?>
 
+<!-- SECTIE -->
 <div class="hero-image">
     <img src="/public/images/kdg-school.png" class="school-image">
 </div>
 
+
+<!-- SECTIE -->
 <div class="about-latest-container">
     <div class="about">
-
         <!-- html vermeid XXS aanvallen, en zorgt ervoor dat de tekst correct wordt weergegeven in html -->
-        <p class="primary-heading"><?= $page->about_title()->html() ?></p>
+        <p class="primary-heading"><?= $about->title()->html() ?></p>
 
-        <p class="paragraph-text"><?= nl2br($page->about_text()->html()) ?></p>
+        <p class="paragraph-text"><?= nl2br($about->text()->kirbytext()) ?></p>
     </div>
 
     <div class="latest-posts">
         
-        <p class="primary-heading"><?= $page->last_post_title()->html() ?></p>
-        <p class="paragraph-text"><?= nl2br($page->last_post_text()->html()) ?></p>
+        <p class="primary-heading"><?= $latestPosts->title()->html() ?></p>
+        <p class="paragraph-text"><?= nl2br($latestPosts->text()->kirbytext()) ?></p>
 
         <a href="https://www.instagram.com/mct.kdg/">
             <button class="primary-btn">Follow us</button>
@@ -24,6 +36,7 @@
     </div>
 </div>
 
+<!-- SECTIE -->
 <div class="profiles">
     <div class="profiles-links">
 
@@ -63,15 +76,15 @@
     </div>
     
     <div class="profiles-info">
-        <p class="primary-heading"><?= $page->profiles_title()->html() ?></p>
-        <p class="paragraph-text"><?= $page->profiles_text() ?></p>
+        <p class="primary-heading"><?= $profileInfo->title()->html() ?></p>
+        <p class="paragraph-text"><?= nl2br($profileInfo->text()->kirbytext()) ?></p>
     </div>
 </div>
 
 
-
+<!-- SECTIE -->
 <div class="subject">
-    <p class="primary-heading">Subject</p>
+    <p class="primary-heading"><?= $subjectInfo->title()->html() ?></p>
 
     <div class="subject-cards-container">
         <?php
@@ -104,12 +117,13 @@
     </div>
 </div>
 
+<!-- SECTIE -->
 <div class="discover-your-passion">
     <img src="/public/images/kdg-logo-zwart.png">
 
     <div class="info">
-        <p class="title">Discover Your Passion!</p>
-        <p class="description">Join us and explore the exciting world of multimedia & creative technologies.</p>
+        <p class="title"><?= $discover->title()->html() ?></p>
+        <p class="description"><?= nl2br($discover->text()->kirbytext()) ?></p>
     </div>
 
     <a href="https://www.kdg.be/inschrijven">
@@ -117,11 +131,12 @@
     </a>
 </div>
 
+<!-- SECTIE -->
 <div class="portfolio">
     
     <div class="portfolio-heading">
-        <p class="primary-heading"><?= $page->portfolio_title()->html() ?></p>
-        <p> <?= $page->portfolio_text()->html() ?></p>
+        <p class="primary-heading"><?= $portfolioInfo->title()->html() ?></p>
+        <p> <?= nl2br($portfolioInfo->text()->kirbytext()) ?></p>
     </div>
 
     <div class="subject-cards-container">
@@ -169,15 +184,18 @@
    
 </div>
 
+<!-- SECTIE -->
 <div class="faq-container">
     <?php snippet('faq') ?>
 </div>
 
+<!-- SECTIE -->
 <div class="contact-us">
     <div class="contact-info">
-        <p class="primary-heading">Contact us</p>
-        <p class="paragraph-text">More questions, or couldn't find the anwser you were looking for in the FAQ? Contact us here!</p>
+        <p class="primary-heading"><?= $contact->title()->html() ?></p>
+        <p class="paragraph-text"><?= nl2br($contact->text()->html()) ?></p>
     </div>
+
     <div class="contact-form">
         <form class="contact-us-form">
             <label for="name" class="sub-heading">Name</label>
@@ -201,6 +219,7 @@
     </div>
 </div>
 
+<!-- SECTIE -->
 <div class="map">
     <img src="/public/images/temporary-pic.png" alt="Temporary picture">
 </div>

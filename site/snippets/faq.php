@@ -1,6 +1,6 @@
 <?php
 
-$faq = page('faq');
+$faq = page('home')->find('faq');
 $questions = $faq->questions()->toStructure();
 
 ?>
