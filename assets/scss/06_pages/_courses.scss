@@ -1,10 +1,13 @@
 @use '00_common/variables'; 
 
+.courses-heading, .profile-filter, .study-program {
+    padding: 50px; 
+}
+
 .courses-heading {
     margin-top: 75px; 
     background-color: variables.$black-light;
-    color: variables.$white; 
-    padding: 50px; 
+    color: variables.$white;  
     display: flex; 
     justify-content: center;
     align-items: center;
@@ -14,15 +17,22 @@
     font-size: 20px; 
 }
 
-.profile-filter {
-    padding: 50px; 
+.profile-filters-container {
     display: flex; 
+    align-items: center;
     justify-content: center;
+}
+.profile-filter {
+    display: flex; 
+    flex-direction: column;
     gap: 10px; 
+    padding-bottom: 0;
+    width: 80%; 
 }
 
 .header-btns {
     display: flex; 
+    flex-direction: column;
     white-space: nowrap;
     gap: 10px; 
 }
@@ -30,17 +40,88 @@
 .courses-btn {
     text-decoration: none;
     color: inherit; 
-    border: 3px solid rgba(55, 127, 158, 0.712);
+    border: 3px solid variables.$dark-blue;
     padding: 7px; 
     flex: 1; 
     background: none;
     border-radius: 6px;
+    text-align: center;
 
     &.active {
-        background-color: rgba(55, 127, 158, 0.712);
+        background-color: variables.$dark-blue;
     }
 }
 
-table, th, td {
-    border: 1px solid black; 
+.study-program {
+    display: flex; 
+    justify-content: center;
+}
+.courses-table {
+    width: 100%; 
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 16px;
+    overflow: hidden; 
+    border: 2px solid black; 
+
+    thead th {
+        background-color: #2A4E5D;
+        color: white; 
+        font-size: 15px; 
+    }
+    thead tr {
+        background-color: #2A4E5D;
+    }
+    th, td {
+        padding: min(2vw, 20px); 
+        font-weight: 400; 
+    }
+    td {
+        border: none;
+    }
+    tbody tr {
+        position: relative; 
+    }
+    tbody tr:not(:last-child)::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 2%;
+        right: 0; 
+        width: 95%; 
+        height: 1px; 
+        background-color: black; 
+    }
+
+    svg {
+        width: min(4vw, 40px); 
+        color: #2A4E5D; 
+    }
+    .course-subject {
+        font-weight: 600; 
+    }
+    .credits {
+        text-align: center;
+    }
+    .profile {
+        border: 1px solid black; 
+        display: inline-block;
+        font-weight: 400; 
+        padding: 2px 15px;
+        margin-bottom: 10px; 
+        border-radius: 8px;
+    }
+    p {
+        margin: 0; 
+    }
+}
+
+@media screen and (min-width: 768px) {
+    
+    .header-btns, .profile-filter {
+        flex-direction: row;
+    }
+    .courses-table {
+        width: 80%; 
+    }
 }

@@ -1,28 +1,14 @@
 <?php
-    require_once kirby()->root('site') . '/helpers/db-connect.php';
-
+    // require_once kirby()->root('site') . '/helpers/db-connect.php';
+    require_once kirby()->root('site') . '/helpers/db-filters.php';
+    
     use Kirby\Database\Db;
 
-    getDatabaseConnection();
+    $filter = get('filter');
+    $data = getCoursesPerYear($filter);
 
-    $filter = get('filter'); 
-    $query = []; 
-
-    if ($filter == "firstyear") {
-        $query = ['year' => 1]; 
-    } elseif ($filter == "secondyear") {
-        $query = ['year' => 2];
-    } elseif ($filter == "thirdyear") {
-        $query = ['year' => 3];
-    }
-
-    $data = empty($query)
-    ? Db::select('classes', '*') 
-    : Db::select('classes', '*', $query);
-
-
-    function isActive($currentFilter, $filterValue) {
-        // Als er geen filter is ingesteld, beschouw 'all' als actief
+    function isActive($currentFilter, $filterValue) 
+    {
         if (!$currentFilter && $filterValue === 'all') {
             return 'active';
         }
@@ -47,29 +33,46 @@
 
 </div>
 
-<div class="profile-filter">
-    <button class="courses-btn" data-filter="all">All courses</button>
-    <button class="courses-btn" data-filter="programming">Programming</button>
-    <button class="courses-btn" data-filter="secondyear">3D</button>
-    <button class="courses-btn" data-filter="thirdyear">UX/UI</button>
-    <button class="courses-btn" data-filter="nomads">AV</button>
+<div class="profile-filters-container">
+    <div class="profile-filter">
+        <button class="courses-btn" data-filter="all">All courses</button>
+        <button class="courses-btn" data-filter="programming">AV</button>
+        <button class="courses-btn" data-filter="secondyear">Web</button>
+        <button class="courses-btn" data-filter="thirdyear">3D VFX</button>
+        <button class="courses-btn" data-filter="nomads">General</button>
+    </div>
 </div>
 
-<table>
-    <thead>
-        <tr>
-            <th>Period</th>
-            <th>Subject</th>
-            <th>Study points</th>
-        </tr>
-    </thead>
-    <tbody>
-        <?php foreach ($data as $record): ?>
+<div class="study-program">
+    <table class="courses-table">
+        <thead>
             <tr>
-                <td><?= $record->period ?></td>
-                <td><?= $record->subject ?></td>
-                <td><?= $record->credits ?></td>
+                <th>Period</th>
+                <th>Subject</th>
+                <th class="svg-colomn"></th>
+                <th>Study points</th>
             </tr>
-        <?php endforeach ?>
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            <?php foreach ($data as $record): ?>
+                <?php $profileName = getProfile($record->profile_id); ?>
+                
+                <tr>
+                    <td><?= $record->period ?></td>
+                    <td class="course-subject">
+                        <p class="profile"><?= htmlspecialchars($profileName ?? 'No profile'); ?></p>
+                        <p><?= $record->subject ?></p>
+                    </td>
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                        </svg>
+                    </td>
+                    <td class="credits"><?= $record->credits ?> Credits</td>
+                </tr>
+            <?php endforeach ?>
+        </tbody>
+    </table>
+</div>
+
+<?php snippet('footer') ?>
