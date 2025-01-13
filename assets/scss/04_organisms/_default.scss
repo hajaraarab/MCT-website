@@ -1,0 +1,12 @@
+.default {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px; 
+    padding: 50px; 
+
+    .profile-filter-btn {
+        margin-top: 70px; 
+    }
+}

@@ -1,5 +1,9 @@
 <?php snippet('header') ?>
 
-<h1><?= $page->title() ?></h1>
+<div class="default">
+    <p class="primary-heading">Something went wrong...</p>
+
+    <a href="home" class="profile-filter-btn">Go home</a>
+</div>
 
 <?php snippet('footer') ?>

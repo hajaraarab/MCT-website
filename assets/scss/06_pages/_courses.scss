@@ -17,23 +17,36 @@
     font-size: 20px; 
 }
 
-
-.header-btns {
+.profile-filters-container {
     display: flex; 
-    flex-direction: column;
-    white-space: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+.header-btns, .profile-filter {
+    display: flex; 
+    flex-wrap: wrap; 
     gap: 10px; 
+    justify-content: center; 
+}
+.profile-filter {
+    padding-bottom: 0;
 }
 
-.year-filter-btn {
+.year-filter-btn, .profile-filter-btn {
+    white-space: nowrap;
     text-decoration: none;
     color: inherit; 
-    border: 3px solid variables.$primary-color-transparent;
-    padding: 7px; 
-    flex: 1; 
-    background: none;
-    border-radius: 6px;
     text-align: center;
+    border-radius: 6px;
+    background: none;
+    padding: 7px; 
+    flex: 0 0 48%;
+    max-width: 200px; 
+    box-sizing: border-box;
+}
+.year-filter-btn {
+    border: 3px solid variables.$primary-color-transparent;
+    flex: 1; 
 
     &.active {
         background-color: variables.$primary-color-transparent;
@@ -43,29 +56,20 @@
     }
 }
 
-.profile-filters-container {
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-}
-.profile-filter {
-    display: flex; 
-    flex-direction: column;
-    gap: 10px; 
-    padding-bottom: 0;
-}
-
 .profile-filter-btn {
     width: 150px; 
-    padding: 7px; 
     border: 3px solid variables.$dark-blue; 
-    border-radius: 6px;
-    background: none;
     font-size: 16px; 
     font-family: variables.$secondary-font;
 
     &:hover {
         background-color: variables.$grey-light;
+    }
+    &.active {
+        background-color: variables.$primary-color;
+        color: white; 
+        font-weight: 600; 
+        border: 3px solid variables.$primary-color; 
     }
 }
 .study-program {
