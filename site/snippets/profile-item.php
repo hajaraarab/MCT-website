@@ -1,5 +1,5 @@
 <div class="profile-item">
-    <div class="profile-icon-wrapper">
+    <div class="icon-wrapper">
         <img src="<?= $icon ?>" alt="<?= $alt ?>">
     </div>
 

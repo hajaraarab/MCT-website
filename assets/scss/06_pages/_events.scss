@@ -1,0 +1,85 @@
+@use '00_common/variables'; 
+
+
+.events-header {
+    margin-top: 90px; 
+    padding: 50px; 
+    background-color: variables.$black-light; 
+    color: variables.$white; 
+    text-align: center; 
+
+    &.schoolevents {
+        margin-top: 0; 
+    }
+}
+
+.schedule {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    width: 100%;
+    margin: 0 auto; 
+    border-bottom: 2px solid variables.$grey-light; 
+}
+
+.infodays-wrapper {
+    width: 100%; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px; 
+}
+.infodays {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px; 
+    text-align: center;
+
+    .icon-wrapper {
+        background-color: variables.$grey-light;
+
+        &:hover {
+            background-color: variables.$grey-dark;
+        }
+    }
+
+    //TYPOGRAPHY
+    .date {
+        color: variables.$primary-color; 
+        font-size: 20px; 
+        margin-bottom: 10px; 
+    }
+    .location {
+        margin: 0; 
+    }
+}
+
+.events-img-wrapper {
+    padding: 70px; 
+    display: flex; 
+    justify-content: center;
+    border-bottom: 1px solid variables.$grey-light; 
+    max-width: 100%; 
+
+    img {
+        border-radius: 6px; 
+        max-width: 100%; 
+    }
+}
+//TYPOGRAPHY 
+.section-title {
+    font-size: 30px; 
+    font-weight: 600; 
+}
+
+@media screen and (min-width: 768px) {
+    .infodays-wrapper {
+        flex-direction: row;
+    }
+    .schedule {
+        width: 80%; 
+    }
+}

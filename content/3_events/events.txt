@@ -1,1 +1,13 @@
 Title: Events
+----
+Subtitle: Upcoming Info Days 
+----
+Text: Discover our upcoming information days in your area.
+----
+InfoDaysTitle: Info Days Schedule
+----
+SchoolEventsTitle: School Events
+----
+SchoolEventsText: Engage with our community through exciting school events. 
+----
+UpcomingEventsTitle: Upcoming Events
