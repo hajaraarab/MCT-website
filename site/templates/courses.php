@@ -60,7 +60,7 @@
                 <tr>
                     <td><?= $record->period ?></td>
                     <td class="course-subject">
-                        <p class="profile"><?= htmlspecialchars($profileName ?? 'No profile'); ?></p>
+                        <p class="profile"><?= getProfile($record->profile_id) ?></p>
                         <p><?= $record->subject ?></p>
                     </td>
                     <td>

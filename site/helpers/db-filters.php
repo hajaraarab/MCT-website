@@ -20,13 +20,24 @@ function getCoursesPerYear($filter)
     return $data; 
 }
 
-function getProfile($profileId) {
+function getProfile($profileId) 
+{
     if (!$profileId) {
-        return null; // Als er geen profiel-ID is, geef niets terug
+        return 'No profile'; 
     }
 
-    // Query om het profiel op te halen
-    $profile = Db::first('profiles', ['profile'], ['id' => $profileId]);
+    $decodedProfileID = json_decode($profileId, true);
 
-    return $profile ? $profile->profile : null;
+    if(is_array($decodedProfileID))
+    {
+        return 'All profiles'; 
+    }
+    $profile = Db::first('profiles', ['profile_name'], ['id' => $profileId]);
+
+    if($profile) 
+    {
+        return $profile->profile_name; 
+    }
+
 }
+
