@@ -5,7 +5,8 @@
     use Kirby\Database\Db;
 
     $filter = get('filter');
-    $data = getCoursesPerYear($filter);
+    $data = filterPerYear($filter);
+    $data = filterPerProfile($filter); 
 
     function isActive($currentFilter, $filterValue) 
     {
@@ -24,22 +25,22 @@
     <p class="subheading">First year   Second year   Third year</p>
 
     <div class="header-btns">
-        <a href="?filter=all" class="courses-btn <?= isActive($filter, 'all') ?>">All courses</a>
-        <a href="?filter=firstyear" class="courses-btn <?= isActive($filter, 'firstyear') ?>">First year</a>
-        <a href="?filter=secondyear" class="courses-btn <?= isActive($filter, 'secondyear') ?>">Second year</a>
-        <a href="?filter=thirdyear" class="courses-btn <?= isActive($filter, 'thirdyear') ?>">Third year</a>
-        <a href="?filter=nomads" class="courses-btn <?= isActive($filter, 'nomads') ?>">Nomads</a>
+        <a href="?filter=all" class="year-filter-btn <?= isActive($filter, 'all') ?>">All courses</a>
+        <a href="?filter=firstyear" class="year-filter-btn <?= isActive($filter, 'firstyear') ?>">First year</a>
+        <a href="?filter=secondyear" class="year-filter-btn <?= isActive($filter, 'secondyear') ?>">Second year</a>
+        <a href="?filter=thirdyear" class="year-filter-btn <?= isActive($filter, 'thirdyear') ?>">Third year</a>
+        <a href="?filter=nomads" class="year-filter-btn <?= isActive($filter, 'nomads') ?>">Nomads</a>
     </div>
 
 </div>
 
 <div class="profile-filters-container">
     <div class="profile-filter">
-        <button class="courses-btn" data-filter="all">All courses</button>
-        <button class="courses-btn" data-filter="programming">AV</button>
-        <button class="courses-btn" data-filter="secondyear">Web</button>
-        <button class="courses-btn" data-filter="thirdyear">3D VFX</button>
-        <button class="courses-btn" data-filter="nomads">General</button>
+       <a href="?filter=all" class="profile-filter-btn <?= isActive($filter, 'all') ?>">All profiles</a>
+       <a href="?filter=av" class="profile-filter-btn <?= isActive($filter, 'av') ?>">AV</a>
+       <a href="?filter=web" class="profile-filter-btn <?= isActive($filter, 'web') ?>">Web</a>
+       <a href="?filter=3D" class="profile-filter-btn <?= isActive($filter, '3D') ?>">3D VFX</a>
+       <a href="?filter=general" class="profile-filter-btn <?= isActive($filter, 'general') ?>">General</a>
     </div>
 </div>
 

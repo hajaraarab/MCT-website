@@ -3,7 +3,7 @@
 require_once kirby()->root('site') . '/helpers/db-queries.php';
 
 
-function getCoursesPerYear($filter)
+function filterPerYear($filter)
 {
     $filter = get('filter');
     $query = [];
@@ -18,6 +18,32 @@ function getCoursesPerYear($filter)
 
     $data = getClasses($query);
     return $data; 
+}
+
+function filterPerProfile($filter)
+{
+    $filter = get('filter'); // Haal de filter op uit de URL
+    $query = [];
+
+    if ($filter == "av") 
+    {
+        $query = ['profile_id' => '1'];
+    } 
+    elseif ($filter == "web") 
+    {
+        $query = ['profile_id' => '2'];
+    } 
+    elseif ($filter == "3D") 
+    {
+        $query = ['profile_id' => '3'];
+    } 
+    elseif ($filter == "general") 
+    {
+        $query = ['profile_id' => '4'];
+    }
+
+    $data = getClasses($query);
+    return $data;
 }
 
 function getProfile($profileId) 

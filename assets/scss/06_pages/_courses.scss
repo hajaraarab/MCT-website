@@ -17,6 +17,32 @@
     font-size: 20px; 
 }
 
+
+.header-btns {
+    display: flex; 
+    flex-direction: column;
+    white-space: nowrap;
+    gap: 10px; 
+}
+
+.year-filter-btn {
+    text-decoration: none;
+    color: inherit; 
+    border: 3px solid variables.$primary-color-transparent;
+    padding: 7px; 
+    flex: 1; 
+    background: none;
+    border-radius: 6px;
+    text-align: center;
+
+    &.active {
+        background-color: variables.$primary-color-transparent;
+    }
+    &:hover {
+        background-color: #404040;
+    }
+}
+
 .profile-filters-container {
     display: flex; 
     align-items: center;
@@ -27,31 +53,21 @@
     flex-direction: column;
     gap: 10px; 
     padding-bottom: 0;
-    width: 80%; 
 }
 
-.header-btns {
-    display: flex; 
-    flex-direction: column;
-    white-space: nowrap;
-    gap: 10px; 
-}
-
-.courses-btn {
-    text-decoration: none;
-    color: inherit; 
-    border: 3px solid variables.$dark-blue;
+.profile-filter-btn {
+    width: 150px; 
     padding: 7px; 
-    flex: 1; 
-    background: none;
+    border: 3px solid variables.$dark-blue; 
     border-radius: 6px;
-    text-align: center;
+    background: none;
+    font-size: 16px; 
+    font-family: variables.$secondary-font;
 
-    &.active {
-        background-color: variables.$dark-blue;
+    &:hover {
+        background-color: variables.$grey-light;
     }
 }
-
 .study-program {
     display: flex; 
     justify-content: center;
@@ -65,12 +81,12 @@
     border: 2px solid black; 
 
     thead th {
-        background-color: #2A4E5D;
+        background-color: variables.$dark-blue;
         color: white; 
         font-size: 15px; 
     }
     thead tr {
-        background-color: #2A4E5D;
+        background-color: variables.$dark-blue;
     }
     th, td {
         padding: min(2vw, 20px); 
@@ -95,7 +111,7 @@
 
     svg {
         width: min(4vw, 40px); 
-        color: #2A4E5D; 
+        color: variables.$dark-blue; 
     }
     .course-subject {
         font-weight: 600; 
