@@ -57,3 +57,7 @@ composer.lock
 .vscode/
 
 /node_modules
+
+/site/config/google_oauth.json
+
+/vendor

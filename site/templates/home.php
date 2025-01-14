@@ -1,5 +1,7 @@
 <?php
 
+session_start(); 
+
    $about = $page->find('about');
    $latestPosts = $page->find('latest-posts');
    $profileInfo = $page->find('profiles');
@@ -7,6 +9,7 @@
    $discover = $page->find('discover');
    $portfolioInfo = $page->find('portfolio');
    $contact = $page->find('contact');
+
 ?>
 
 <?php snippet('header') ?>
@@ -197,29 +200,9 @@
         <p class="paragraph-text"><?= nl2br($contact->text()->html()) ?></p>
     </div>
 
-    <div class="contact-form">
-        <form class="contact-us-form">
-            <label for="name" class="sub-heading">Name</label>
-            <input type="text" placeholder="Your Name">
+<?php include __DIR__ . '/contact-form.php'; ?>
 
-            <label for="email" class="sub-heading">Email</label>
-            <input type="email" placeholder="Your Email">
-
-            <label for="message" class="sub-heading">Message</label>
-            <textarea name="message" id="message" placeholder="Your message"></textarea>
-
-            <div class="buttons">
-                <a href="https://www.kdg.be/inschrijven">
-                    <button class="secondary-btn">Undo</button>
-                </a>
-                <a href="https://www.instagram.com/mct.kdg/">
-                    <button class="primary-btn">Send</button>
-                </a>
-            </div>
-        </form>
-    </div>
 </div>
-
 <!-- SECTIE -->
 <div class="map">
     <img src="/public/images/temporary-pic.png" alt="Temporary picture">
