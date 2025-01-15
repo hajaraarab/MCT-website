@@ -44,6 +44,10 @@
         &:hover {
             background-color: variables.$grey-dark;
         }
+
+        .close-icon svg {
+            display: none; 
+        }
     }
 
     //TYPOGRAPHY
@@ -51,6 +55,9 @@
         color: variables.$primary-color; 
         font-size: 20px; 
         margin-bottom: 10px; 
+    }
+    .date:hover {
+        text-decoration: underline;
     }
     .location {
         margin: 0; 

@@ -17,5 +17,5 @@ Questions:
   question: "How can we get to campus (and are there any housing possibilities/dormitories) ?"
   answer: "Yes! Currently this course is split between the Dutch version and an exchange-friendy English version."
   - 
-  question: "Can we go on exchange proograms through this course ?"
+  question: "Can we go on exchange programs through this course ?"
   answer: "Yes! Currently this course is split between the Dutch version and an exchange-friendy English version."

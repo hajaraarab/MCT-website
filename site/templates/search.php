@@ -2,7 +2,6 @@
 
 <div class="search-page">
 
-    <?php snippet('search-form'); ?>
 
     <?php if ($query = get('search')): ?>
         <h2>Search Results for "<?= esc($query) ?>"</h2>

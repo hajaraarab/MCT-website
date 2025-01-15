@@ -25,12 +25,6 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12H12m-8.25 5.25h16.5" />
             </svg>
         </div>
-
-        <div class="close-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-            </svg>
-        </div>
     </button>
 
     <div class="header-content">
@@ -67,10 +61,13 @@
         const overlay = document.querySelector('.overlay'); 
         
         menuButton.addEventListener('click', () => {
-            if(menu.style.display === 'none' || menu.style.display === '') {
+            if(menu.style.display === 'none' || menu.style.display === '') 
+            {
                 menu.style.display = "block"; 
                 overlay.style.display = "block";  
-            } else {
+            } 
+            else 
+            {
                 menu.style.display = "none"; 
                 overlay.style.display = "none"; 
             }
