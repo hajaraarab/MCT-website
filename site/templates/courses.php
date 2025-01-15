@@ -5,8 +5,24 @@
     use Kirby\Database\Db;
 
     $filter = get('filter');
-    $data = filterPerYear($filter);
-    $data = filterPerProfile($filter); 
+    $data = [];
+
+    // Detecteer of de filter een jaar of profiel is
+    if (in_array($filter, ['firstyear', 'secondyear', 'thirdyear', 'all'])) 
+    {
+        // Jaarfilter toepassen
+        $data = filterPerYear($filter);
+    } 
+    elseif (in_array($filter, ['av', 'web', '3D', 'general', 'all'])) 
+    {
+        // Profielfilter toepassen
+        $data = filterPerProfile($filter);
+    } 
+    else 
+    {
+        // Geen geldig filter; toon standaard alle data
+        $data = getClasses();
+    }
 
     function isActive($currentFilter, $filterValue) 
     {

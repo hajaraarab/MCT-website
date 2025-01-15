@@ -8,11 +8,16 @@ function filterPerYear($filter)
     $filter = get('filter');
     $query = [];
 
-    if ($filter == "firstyear") {
+    if ($filter == "firstyear") 
+    {
         $query = ['year' => 1];
-    } elseif ($filter == "secondyear") {
+    } 
+    elseif ($filter == "secondyear") 
+    {
         $query = ['year' => 2];
-    } elseif ($filter == "thirdyear") {
+    } 
+    elseif ($filter == "thirdyear") 
+    {
         $query = ['year' => 3];
     }
 
