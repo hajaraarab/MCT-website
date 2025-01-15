@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     {
         $_SESSION['error'] = 'Please enter a valid email address.';
 
-        header('Location: /#contact-form');
+        header('Location: /#contact-us');
         exit;
     } 
     else 

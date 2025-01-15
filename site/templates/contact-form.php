@@ -4,7 +4,7 @@
 
     <?php if (!empty($_SESSION['error'])): ?>
         <p class="error"><?= $_SESSION['error'] ?></p>
-        <?php //unset($_SESSION['error']); ?>
+        <?php unset($_SESSION['error']); ?>
     <?php endif; ?>
 
     <?php if (!empty($_SESSION['success'])): ?>
@@ -12,7 +12,7 @@
         <?php unset($_SESSION['success']); ?>
     <?php endif; ?>
 
-    <form class="contact-us-form" method="POST" action="/contact-form">
+    <form class="contact-us-form" id="contact-us-form" method="POST" action="/contact-form">
         <label for="name" class="sub-heading">Name</label>
         <input type="text" name="name" id="name" placeholder="Your Name" value="<?= htmlspecialchars($formData['name'] ?? '', ENT_QUOTES) ?>">
 

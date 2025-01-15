@@ -194,7 +194,7 @@ session_start();
 </div>
 
 <!-- SECTIE -->
-<div class="contact-us">
+<div class="contact-us" id="contact-us">
     <div class="contact-info">
         <p class="primary-heading"><?= $contact->title()->html() ?></p>
         <p class="paragraph-text"><?= nl2br($contact->text()->html()) ?></p>

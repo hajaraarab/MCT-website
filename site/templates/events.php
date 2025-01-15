@@ -31,9 +31,10 @@
 </div>
 
 
-<div class="events-img-wrapper">
-    <img src="../../public/images/events-foto.png" alt="Photo of the event activities">
-</div>
+<?php snippet('img-slider', [
+    'imagePath1' => 'public/images/events-foto.png',
+    'imagePath2' => 'public/images/av-foto.png'
+]); ?>
 
 <div class="events-header schoolevents">
     <p class="primary-heading"><?= $page->SchoolEventsTitle() ?></p>
@@ -62,8 +63,9 @@
     </div>
 </div>
 
-<div class="events-img-wrapper">
-    <img src="../../public/images/av-foto.png" alt="AV-related event photo">
-</div>
+<?php snippet('img-slider', [
+    'imagePath1' => 'public/images/av-foto.png',
+    'imagePath2' => 'public/images/events-foto.png'
+]); ?>
 
 <?php snippet('footer') ?>
